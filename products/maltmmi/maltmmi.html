@@ -1,0 +1,259 @@
+<html lang="hu">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, charset=utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../style/style.css">
+    <link rel="stylesheet" href="../../style/modalimage.css">
+    <meta name="author" content="Margit Róbert Konovolúció Bt.">
+    <title>MALTMMI</title>
+  </head>
+  <body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../../index.html"><img src ="../../images/logo_204x60.jpg" alt="AltonTech"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item ">
+              <a class="nav-link active"aria-current="page" href="../../index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Fejlesztői dokumentációk
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../../getting-started.html">Ismerkedjünk meg</a>
+
+                </div>
+              </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Termékek
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="../../products/maltmmi/maltmmi.html">MALTMMI</a>
+                <a class="dropdown-item" href="../../products/malt40io/malt40io.html">MALT40IO</a>
+                <a class="dropdown-item" href="../../products/malt132/malt132.html">MALT132</a>
+                <a class="dropdown-item" href="../../products/malt23thv/malt23thv.html">MALT23THV</a>
+                <a class="dropdown-item" href="../../products/malt16pin/malt16pin.html">MALT16PIN</a>
+                <a class="dropdown-item" href="../../products/malt160t/malt160t.html">MALT160T</a>
+                <a class="dropdown-item" href="../../products/maltcon/maltcon.html">MALTCON</a>
+                <a class="dropdown-item" href="../../products/malt24vi/malt24vi.html">MALT24VI</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  LabView
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="../../labview/labview-begin.html">
+                  Kezdetek</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../version.html">Változások</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  <main class="container">
+    <div class="row">
+      <div class="col-12">
+
+        <div class="card mb-3 mt-3">
+          <div class="row g-0">
+            <div class="col-md-7">
+              <img src="./maltmmi_001.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-5">
+              <div class="card-body">
+                <h5 class="card-title">MALTMMI Man Machine Interface</h5>
+                <p class="card-text">
+                  <ul>
+                    <li> A 24V táp biztosítása 180W-ig </li>
+                    <li> Kapcsolható 230V-os hálózati csatlakozó.</li>
+                    <li> 5 ponton aktiválható vészkör biztonsági relékkel </li>
+                    <li> Izolált CAN busz állítható sebességgel</li>
+                    <li> Hűtés vezérlés és felügyelet </li>
+                    <li> One-Line rendszerű fényfüggöny támogatás </li>
+                  </ul>
+                </p>
+                <p class="card-text"><small class="text-muted">Last updated 2021.10.01</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2>Kezelőszervek</h2>
+        <p>
+          <img class="img_modal_function" src="./front_titles.PNG" title="MALTMMI kezelőszervei" caption="" alt="" width="800px">
+          <ul>
+            <li> Hálózat meglétét jelző Mains jelzőfény.(zöld)</li>
+            <li> Felhasználó által hozzáférhető biztosítékok.</li>
+            <li> Hálózati főkapcsoló Main Switch, ami a 2db 230V-os aljaztok kivételével mindent kapcsol.</li>
+            <li> Vészleállító kapcsoló </li>
+            <li> A készülék bekapcsolását jelző fehér Power jelzőfény.</li>
+            <li> Kék Arm nyomógombbal a készülék bekapcsolása történik.</li>
+            <li> API-ból lekérdezhető Start nyomógomb. </li>
+            <li> API-ból lekérdezhető "Cancel" nyomógomb.</li>
+          </ul>
+          <p class="card-text"><small class="text-muted">Last updated 2021.10.12</small></p>
+       </p>
+
+        <h2>Vészkör</h2>
+        <p>A vészkör 5 ponton aktiválható, ezek:
+          <ol type="1">
+            <li>Doors Open - pl.: a gép egy olyan ajtója nincs zárva, ami veszélyes lehet. A normál működéshez rövidre kell zárni. </li>
+            <li>Remote Emergency Stop: - pl.: A gép méreteiből adódóan az MMI-tól távolabb kell elhelyezni a vészleállító kapcsolót, akkor ez az: Remote Emergency Stop kapcsoló. </li>
+            <li>Emergency Stop Front Switch - Az MMI előlapján található kapcsoló.</li>
+            <li>Soft Emergency - Az MMI szoftvere vált ki vészállást pl.: a fényfüggönybe való benyúlás miatt.</li>
+          </ol>
+          <img class="img_modal_function" src="./safety block.JPG" title="Safety block" caption="" alt="" width="800px">
+        </p>
+
+       <h2> Tápellátás </h2>
+         <p>
+           <ul>
+            <li>A 24V-os tápellátásról egy 200W-os tápegység gondoskodik, amit a CAN busz csatlakozók felé 3 irányba kerül szétosztásra.</li> 
+            <li>A 24V-os CAN busz csatlakozók tápellátása egyenként API-ból kapcsolható, terhelhetősége: TBD</li>  
+            <li>A kapcsolható 230V-os aljzatok nincsenek biztosítva, nincsenek vészkörben, nem kapcsolható </li>
+            <li>A kapcsolható 230V-os csatlakozó biztosítva van, benne van a vészkörben, fogyasztásmérővel van ellátva.</li>
+           </ul>
+         </p>
+
+         <h2>Interface</h2>
+         A számítógéppel a kapcsolatot alapvetően CAN-buszon tarja.
+         A CAN busz sebessége konfigurálható, galvanikusan leválasztott.
+        <p>Az Ethernet csatlakozó kísérleti stádiumban van.</p>
+
+        <h2> Hűtés</h2>
+        <ul> 
+          <li>Az MMI 24V-os belső tápegysége 2db ventilátorral van ellátva és egy belső hőmérsékelt figyelővel (PT100).</li>
+          <li>Az MMI-hoz köthető 2db 24V-os ventilátor és 2db hőmérséklet mérő, amiket API-ból állíthatók, lekérdezhető </li>
+        </ul>
+
+        <h2>Fényfüggöny támogatása</h2>
+
+        <p>
+          Az MMI a Keyence One-Line System-re van felkészítve aminek a fogadására egy 5-pines M12-anya csatlakozó került a készülékre.
+          <img class="img_modal_function" src="./keyence_oneline_system.PNG" title="Keyence One Line System" caption="" alt="" width="800px">
+        </p>
+        <p>
+          Keyence GLR fényfüggöny katalógus  <a href="./Keyence GLR.pdf">itt.</a>
+        </p> 
+
+        <h2>Hátlapi csatlakozók</h2>
+        <img class="img_modal_function" src="./back_pinout_titles.PNG" title="MMI hátlapi csatlakozók" caption="" alt="" width="640px">
+
+        <h2> Egyéb </h2>
+          <ul>
+            <li>A fényfüggöny engedélyezésére dedikált safety relék kerültek a készülékbe (vészkörös ábrán látható) </li>
+            <li>A firmware "eltévedését" hardveres watch-dog felügyeli. Ez is okozhat vészleállást. </li>
+            <li>A készülék rendelkezik 2db digitális bementtel és 2db digitális kimenttel. M12-es csatlakozókon </li>
+          </ul>
+<<<<<<< HEAD
+
+
+      <h2>Megjegyzések</h2>
+        <ul>
+          <li>Digitális kimenetek</li>
+          <li>Feliratok (STOP sárga felírat?)</li>
+          <li>A csatlakozók ellenoldalainak típusai, a BOM-ban találhatóak meg</li>
+          <li>Az MMI bekötésére egy mintát csinálni, ahol látszódnak a csatlakozók számozásai is</li>
+          <li>Az AltonTech milyen One-Line fényfüggönyt használ?</li>
+          <li>Zöld világító ARM nyomógomb és kék MAINS lámpa </li>
+        </ul>
+=======
+>>>>>>> abd1fa0 (publikus változat)
+      </div>
+
+
+    </div>
+
+    <div class="row" > 
+      <div class="col-12">
+        <div class="card my-3 col-md-6" >
+          <div class="card-body">
+            <h5 class="card-title">Technikai dokumentációk</h5>
+            <p class="card-text">
+              <ul>
+                <li> Block diagramm: <a href="./maltmmi_blockdiagram.pdf" target="_blank">maltmmi_blockdiagram.pdf</a> </li>
+                <li> Block diagramm BOM: <a href="./AltonTech MALTMMI BOM.xlsx" target="_blank">AltonTech MALTMMI BOM.xlsx</a> </li>
+                <li> Nyugalmi teljesítményfelvétel: TBD  </li>
+                <li> Maximális teljesítményfelvétel: TBD  </li>
+                <li> Ajánlott működtetési feszültség tartomány: TBD</li>
+              </ul>
+              <p class="card-text"><small class="text-muted">Last updated 2022.03.02</small></p>
+            </p>  
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="text-center bg-light py-5">
+    <p class="text-muted"> www.altontech.hu </p>
+    <p class="text-muted"> <a href="mailto:info@altontech.hu">info@altontech.hu</a></p>
+    <p class="text-muted"> +36 20 941 6987/+36 20 806 8608 </p>
+    <p class="text-muted"> 2600 Vác, Sándor u. 8.</p>
+  </footer>
+
+<!--Modal for images -->
+<div class="modal fade" id="imageModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen ">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img class="modal-image rounded mx-auto d-block" >    
+          <p class="modal-caption">Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" ></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" ></script>
+
+  <script>
+    'use strict';
+
+    let modalImg = document.querySelector(".modal-image");
+    let modalTitle = document.querySelector(".modal-title");
+    let buttonsClose = document.querySelectorAll(".modal-exit");
+    let caption = document.querySelector(".modal-caption");
+    
+    let myModal = new bootstrap.Modal(document.getElementById('imageModal'), {});
+
+    function init()
+    {
+      let imgs = document.querySelectorAll(".img_modal_function");
+      imgs.forEach(element => {
+        element.addEventListener('click', clickOnImage);
+      })
+    }
+
+    function clickOnImage(ev)
+    {
+      myModal.show();  
+      modalImg.src = ev.target.src;
+      modalTitle.textContent = ev.target.getAttribute('title');
+      caption.textContent = ev.target.getAttribute('caption'); 
+    }
+
+    init();
+  </script>
+  </body>
+</html>

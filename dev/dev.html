@@ -1,0 +1,439 @@
+<html lang="hu">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, charset=utf-8">
+    <!--
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../../style/style.css">
+    <title>MALT Platform Fejlesztőknek </title>
+    <meta name="author" content="Margit Róbert Konovolúció Bt.">
+  </head>
+  <body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="../../index.html"><img src ="../../images/logo_204x60.jpg" alt="AltonTech"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="../../index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Fejlesztői dokumentációk
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="../../getting-started.html">Ismerkedjünk meg</a>
+                <!-- <a class="dropdown-item" href="../../new-device.html">Új eszköz</a>
+                <a class="dropdown-item" href="../../protokol.html">CAN busz protokoll</a>-->
+              </div>
+            </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Termékek
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="../../products/maltmmi/maltmmi.html">MALTMMI</a>
+              <a class="dropdown-item" href="../../products/malt40io/malt40io.html">MALT40IO</a>
+              <a class="dropdown-item" href="../../products/malt132/malt132.html">MALT132</a>
+              <a class="dropdown-item" href="../../products/malt23thv/malt23thv.html">MALT23THV</a>
+              <a class="dropdown-item" href="../../products/malt16pin/malt16pin.html">MALT16PIN</a>
+              <a class="dropdown-item" href="../../products/malt160t/malt160t.html">MALT160T</a>
+              <a class="dropdown-item" href="../../products/maltcon/maltcon.html">MALTCON</a>
+              <a class="dropdown-item" href="../../products/malt24vi/malt24vi.html">MALT24VI</a>
+              <div class="dropdown-divider"></div>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                LabView
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="../../labview/labview-begin.html">
+                Kezdetek</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../version.html">Változások</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2 id="terminal">Terra Term</h2>
+    <ul>
+      <li>Segítségével az eszközök diagnosztikai felülete érhető el</li>
+      <li><a href="https://ttssh2.osdn.jp/index.html.en" target="_blank">Letöltés</a></li>
+      <li>Baudrate:921600</li>
+      <li>Rx,Tx: 3.3V és 5V TTL kompatiblis</li>
+      <li>Ajánlott RS232-USB kábel: <a href="http://https://www.ftdichip.com/Support/Documents/DataSheets/Cables/DS_TTL-232R_CABLES.pdf">TTL-232R-3V3 FTDI</a> </li>
+      <li><a href="./malt_terminal.ps1">PowerShell script</a> terminál megnyitásához (minta)</li>
+    </ul>
+    <div class="row">
+      <div class="col-md-6 mb-2">
+          <img src="./dev_terminal.png" class="img-fluid rounded-start" alt="...">
+      </div> 
+      <div class="col-md-6 mb-2"> 
+          <img src="./dev_uart_pinout.png" class="img-fluid rounded-start" alt="...">
+      </div> 
+    </div>
+    <p class="card-text"><small class="text-muted">Last updated 2021.07.23</small></p>
+
+
+    <h2> Sysinternals TCPView</h2>
+    <ul> 
+      <li>Segitségével a számítógépen létrehozott TCP kapcsolatok vizsgálhatóak</li>
+      <li>Az MaltService a alapértelmezetten a 2013-as portot használja</li>
+      <li> <a href="https://docs.microsoft.com/en-us/sysinternals/downloads/tcpview">Letöltés</a> </li>
+    </ul>
+    <div class="row">
+      <div class="col mb-2"> 
+        <img src="./tcpview.png" class="img-fluid rounded-start" alt="...">
+      </div> 
+    </div>
+    <p class="card-text"><small class="text-muted">Last updated 2021.08.12</small></p>
+
+
+   <h2> STM32CubeIDE </h2>
+   <ul>
+    <li>IDE & Complier: STM32CubeIDE 1.6.1</li>
+    <li>Firmware Package: STM32Cube FW_F1 V1.8.4</li>
+    <li><a href="https://www.st.com/en/development-tools/stm32cubeide.html">Letöltés</a> </li>
+   </ul>
+   <div class="row">
+    <div class="col mb-2"> 
+        <img src="./cubeide.png" class="img-fluid rounded-start" alt="...">
+    </div> 
+  </div>
+  <p class="card-text"><small class="text-muted">Last updated 2021.07.23</small></p>
+
+  <h2>STLinkV2</h2>   
+  <ul>
+    <li>Segítségvél a uC közvetlenül bootloader nélkül programozható vagy debugolható</li>
+    <li>Adapter szükséges hozzá</li>
+  </ul>
+  <img src="./stlink.webp" class="img-fluid rounded-start" alt="...">
+  <p class="card-text"><small class="text-muted">Last updated 2021.07.23</small></p>
+
+
+  <div class="row">
+    <div class="col-12">
+      <h2>AltonTech MALT200817.Service - MaltService debugolása</h2>
+      <hr class="col-xs-12">
+      Lehetőséged van a winodws service debugolására, úgy, hogy sima alkalmazásként futtatod, ehhez végezd el a következő lépseket 
+      <ol>
+        <li>Állisd le a futó Service-t.(pl: <i>sc stop "MaltService"</i>) </li> 
+        <li>VS-ben a Solution Configuartions <b>Release</b> helyett legyen <b>Debug.</b> </li>
+        <li>VS-ben a MALT200817.Service legyen a <b>Set as Startup Project.</b></li>
+        <li>Indísd el a projectet, ekkor a már a TCP kéréseket a VS-ben futatott Service szolgálja ki.</li>
+      </ol>
+    </div>
+  </div>
+
+    <hr class="col-xs-12">
+    <hr class="col-xs-12">
+
+    <h1>Ismert limitációk</h1>
+
+    <!-- Magától lezáródó TCP Connection -->
+    <h2>Magától lezáródó TCP Connection</h2>
+    Abban az esetben ha egy ProcessId-ből több TCP kapcsolatot indítasz, akkor az ablak vagy TCP kapcsolat bezárásakor a LV az összes kapcsolatot bontja ami ahhoz a Process ID-hez tartozik.
+    Az alábbi példában egy projectből két minta indul el párhuzamosan.
+
+    <div class="row">
+      <div class="col-md-6 mb-2">
+          <img src="./two_lv_processId_sample.PNG" class="img-fluid rounded-start" alt="...">
+      </div> 
+      <div class="col-md-6 mb-2"> 
+          <img src="./two_lv_processId_sample_code.PNG" class="img-fluid rounded-start" alt="...">
+      </div> 
+    </div>
+    A TCPView segíségével láthatjuk, hogy a két Local Porthoz(60001 és 60043) tartozó Process ID azonos(248).
+    <div class="row">
+      <div class="col-md-12 mb-2">
+          <img src="./two_lv_processId_tcpview.PNG" class="img-fluid rounded-start" alt="...">
+      </div> 
+    </div>
+    <p>Megoldás: 
+      Két külön projectfájlban legyen egy egy vi, így új Process ID kapnak. Ehhez van egy minta "poroject_a és project_b"</p>
+      <p class="card-text"><small class="text-muted">Last updated 2021.08.12</small></p>
+
+    <h2> NI-XNET: (Hex 0xBFF63001)</h2>
+    <ul>
+      <li>Véletlenszerüen jelenik meg a Service logban, ilyenkor MAX-ból sem lehet elérni a CAN adaptert.</li>
+      <li>Újra kell indítani a számítógépet (elég csak a servic-t majd a kapcsolatot újra meg kell nyitni)</li>
+    </ul>
+
+     <h2> Kimenetek ciklusszámlálóinak mentése </h2>
+      <ul>
+        <li>A 6TL megoldása, hogy induláskor minden ciklusszámláló mentésre kerül, de ez sok idő akár 3-4sec is lehet.</li>
+        <li>Malt megözelitése, hogy a teszt fejelsztőre van bízva, hogy mikor van idő a ciklusszámláló mentésére.</li>
+        <li>Az ajánlásunk az, hogy a teszt lezárása előt kerüljenek mentésre.</li>
+      </ul>
+
+      <h2>Service megjegyezi a korábbi álapotát</h2>
+      <ul>
+        <li>Újra indíátás után pont ugyan annyi eszköz van a buszon mint előtte, még akkor is ha nincs táp alatt semmi...</li>
+        <li>A Service log folytatódik, ez arra utal hogy service nem áll le a számítógép leállításával együtt.</li>
+        https://stackoverflow.com/questions/14523192/windows-service-onstop-when-computer-shutdown
+        Fast startup problémáinak kezelése
+        <li> Javitva, a Shutdown eseményre leállítom a MaltService-t.</li>
+        <li> Ez egy maradó probléma, ugyanis a windows ha a faststartup be van kapcsolva, akkor nem jelzi hogy ő kikapcsolódik vagy aludni megy, olyan mintha semmi sem történt volna</li>
+        <li> újrainditáshoz mindig Restartot használj, NE Shutdown-t!!!!!!!</li>
+      </ul>
+
+      <h2>Output Counters 0-át jeleznek vagy nem frissül</h2>
+        <p>A számlálók lekérdezése jelentősen megterhelik a buszt, mivel egyessével kerülnek lekérdezésre, 
+        ezért egyes estekben az explorer-ben újra rá kell frissíteni hogy látszódjanak az aktuális értékek.
+        </p>
+        <p class="card-text"><small class="text-muted">Last updated 2021.08.12</small></p>
+
+      <h2>XML fájlok átdolgozása</h2>
+        <p> átt dolgozni a relé leírást az xml fájlban, "Port" helyett legyen CommandToRead és legyen benne a parancs, igy láthatóvá válank a TCP parancsok</p>
+        Kész.
+        <p class="card-text"><small class="text-muted">Last updated 2021.08.18</small></p>
+
+      <h2>Expolorer kapcsolat bontása</h2>
+        <p>Az Expolorer olyan mintha nem zárná be magatuán a kapcsolatot és amikor már nagyon sok nyitva akkor egysszere szabadítja fel. 
+        Ez a csatlakozás bontás nyomógomb megnyomásakor érezhető.</p> 
+          Javitva
+        <p class="card-text"><small class="text-muted">Last updated 2021.08.18</small></p>
+
+      <li> Az Explorer szerviz felügyelete</li>
+      A probléma az, hogy ha a windows futtajta a szolgáltatást, akkor a leállítását követeőn 30sec után áll le valjóában, addig kiszolgálja a kéréseket.
+      Ha nem a winows futtajta a szolgáltatást, akkor nincs ez a a probléma.
+      Javitva. TcpClient kapcsolatot külön le kell zárni hogy tényleg bontásra kerüljön a kapcsolat.
+      <ul>
+        <li>Ha elveszti a kapcsolatot, akkor a bal alsó sarokban lévő Status Stopped-re vált</li>
+        <li>Ha elveszti a kapcsolatot, akkor felső sarokban csatlakozást jelző noymógomb "Press to connect"-re vált és piros ikon látható.(Javitva! 30sec-ról -> 0 sec!)</li>
+        <li>Ha elveszti a kapcsolatot, és volt megnyitva eszköz ablakban jelzi, hogy "Staus cannotbe updated"</li>
+        <li>Ha elveszti a kapcsolatot, és eszköz ablakot nyit meg, akkor "Connection lost..." felirat jelenik meg.</li>
+        <li>Ha elindul a szeviz a bal alsó sarokban látható Status Running-ra vált és zöld</li>
+        <li>Ha elindul a szerviz a bal felső sarokban látható csatalakozás nyomógomb "Press to connect"-en marad, a felhasználnónak kell kapcsolódnia.</li>
+      </ul>
+      <p class="card-text"><small class="text-muted">Last updated 2021.08.18</small></p>
+
+      <h2>RunMode: Strict</h2>
+      A kártyák is tudják, hogy milyen módban futnak, mód váltást követően ajánlott mindent újraindítani.
+
+        A driver minden kapott paramétert és szigoruan ellenőriz, illetve többek között:
+      <ul>
+        <li>LabView:Az eszköz életjelét vizsgálja minden parancs kiadását követően.</li>
+        <li>(strict és debug)Malt Expolrer: Az életjeleleket ciklikusan vizsgálja. </li>
+      </ul>
+
+
+      <h2>Explorer nem működik a célzott restart</h2>
+        <p>Minden kártyának a legfrissebb fw-kell futtatnia</p>
+        Javitva.
+        <p class="card-text"><small class="text-muted">Last updated 2021.08.18</small></p>
+
+
+      <li>
+        A sorozatszám, nem egyedi mert a gyári túl hosszú, kompatiblitás törés? A uC UDID-je 96bites
+        96bites UDID nek kell venni a CRC-jét 
+        javitva 
+        <p class="card-text"><small class="text-muted">Last updated 2021.08.25</small></p>
+      </li>     
+      <li>
+        CAN Busz sebbességét növelni
+        kész
+        <p class="card-text"><small class="text-muted">Last updated 2021.08.25</small></p>
+      </li>   
+      <li>
+        A kártyáknak házat építeni amit lehet hordozni is
+        Kész
+        <p class="card-text"><small class="text-muted">Last updated 2021.08.25</small></p>
+      </li>
+      
+      <li>
+        Valami gebasz van a MALT160T counterekkel, lehet a többivel is?
+        Javitva, időzítés probléma volt.
+        <p class="card-text"><small class="text-muted">Last updated 2021.08.25</small></p>
+      </li>   
+      
+      <li>
+        Az Explorerből nem látszódik, strict módban hogy élnek vagy halnak -e az eszközök
+        Kész.
+        <p class="card-text"><small class="text-muted">Last updated 2021.08.26</small></p>
+      </li>
+      <li>
+        MALT16PIN:
+        void OutputOnSeveral(IoTypeDef *h, uint8_t *several, uint8_t block)
+        {
+          memcpy(h->Output.PreState, h->Output.CurState, IO_SPI_IO_ARRAY_SIZE);
+          for(uint8_t i=0; i < DEVICE_BLOCK_SIZE; i++)
+            h->Output.CurState[block * DEVICE_BLOCK_SIZE + i] |= several[i];
+          CounterUpdate(h->Output.PreState, h->Output.CurState, h->Output.Counters);
+        }
+        A DEVICE_BLOCK_SIZE mérete 3bájt volt, és minden 2 bájtra számított... javtiva.
+        <p class="card-text"><small class="text-muted">Last updated 2021.08.27</small></p>
+      </li>
+
+      <li>
+        Service restart menüpontot felvennni
+        Első probra verzió.
+
+        Ha a service StopPennding állapoba ragad, akkor  akövetkező resetnél, a killservice.bat fájl probálja megölni a taskot.
+
+        a service néha beszopódik a stopping állapotba, ekkor csak ez segiít
+        1. admin módban:
+        2. sc queryex MaltService
+        3. taskkill /f /pid [PID]
+        SUCCESS: The process with PID XXXX has been terminated.
+        forrás: https://support.4it.com.au/article/how-to-kill-a-windows-service-which-is-stuck-at-stopping/
+        pl: "taskkill /f /pid 14876"
+
+        <p class="card-text"><small class="text-muted">Last updated 2021.08.30</small></p>
+      </li>
+
+
+
+       <hr class="col-xs-12">
+       <hr class="col-xs-12">
+
+    <ol>
+      <li>
+        várkaozás nélküli a port megnyitás bezárás-tól leláll a service a logba hiba nem kerül...
+      </li>
+      <li>
+        Véletlenszerüen:
+        2021.08.04 11:23:40;Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host.
+      </li>
+
+      <li>MALT23THV-n a  K4-LED nem világít</li>
+
+      <li> Végig frissíeni minden kártyát és az alapfunkciókat kipróbálni </li>
+
+
+      <li>dokumentálni rajzzal a kártyák müködését</li>
+      <li>Hogyan kell CAN bus sebességet beállíani GIF + videó </li>
+
+      <li>
+        MALT160T kártyára block-os mintát csinálni
+      </li>
+
+      <li>
+        Ha meg vannak nyitva a Explorer-ben az eszköz ablakok, és nincs csatlakoztatva eszköz, majd csatlakoztásra kerül, akkor minden eszköz 7-es hibakódot jelez
+        Ezt az okozhatja hogy az adapter sokat bufferel, maximalizálni kellene kimenő buffer méretét.
+        (Ez igazából, akkor probléma amikor az UpTime lekérezés is be van kapcsolva, akkor generálodik sok üzenet)
+
+        Vajon mit csinál 6TL kártya ha nincs buszon a kártya de parancsot küldök neki? ha visszajön a buszra akkor végrehajta?
+
+        MALT esteben az van ha nem él a busz, akkor buffereli, és amikor visszatér az eszköz, akkor rászbadítja a buszra az üzenteket, 
+        (az más kérdés hogy ez olyan gyorsan történik hogy boot után az eszközök ezt nem tudják feldolgozni)
+        Ez egyenlőre csak tulajdonság és nem probléma.
+
+        Egy ábrát kellene készíteni hogy ki és mennyit bufferel... a kártyák 256üzentet, ennek a költsége: 256x8bájt= 2KB
+      </li>
+      <li>
+        strict módban MaltService-nek ellenöriznie kellne a port számok vagy a parancsok létezést
+      </li>
+      <li>
+        malt132 EEPROM dizájnát majd firssíeni kell.
+        itt mire gondoltam vajon?
+      </li>
+      <li>
+        Ezt dokumentálni
+        CAN bus sebesség móosításakor, ha megy az NI adatapter akkor az elétő sebségű eszköz "leöli az adapter"
+        helyes lépések:
+        1. Leállítani MaltService, ha fut
+        2. módosítani a kártyák(on) a sebességeket
+        3. módosítani a config fájlban a sebességet
+        4. elindítani a MaltService-t
+      </li>
+
+
+      <li>
+        - Az eszközök listája a MaltService indituása után csak nőhet, (mivel problémás megoldani egy eszközt kivenni a listábóól ha meghalt)
+        - Egy eszköz hogy él vagy halott azt egy mező jelzi, strict módban
+      </li>
+
+      <li>
+        Prfomencia tesztek
+      </li>
+
+      <li>
+        Nagyobb TestStand-es minta
+      </li>
+
+    </ol>
+
+  <h3>Fejlesztői tesztek</h3>
+  <hr class="col-xs-12">
+<ul>
+  <li>Ellenőrizd a tápegység maximális terhelhetőségét: minimum 5W</li>
+</ul>
+<h3>Sorozatgyártós tesztek</h3>
+<ul>
+  <li>Kártya tápfeszültség alá helyezése után</li>
+  <ol>
+    <li>A narancs lednek világítania kell</li>
+    <li>A zöld LED-nek 5sec ig gyorsan kell villogni kell, majd tovább
+      lassan.</li>
+    <li>Piros LED nem villoghat és nem is világíthat.</li>
+    <li>Beapcsolás pillanatában relé nem kattanhat.</li>
+  </ol>
+  <li>6TL feluletéről a kártya sorozszámának olvasása.</li>
+  <ol>
+    <li>A kártya sorozatszámának egyedinek kell lennia</li>
+    <li> <s> A kárty sorozatszám 24bites véletlen szám ami az első
+        bekapcsoláskor generálodik.</s> </li>
+  </ol>
+  <li>6TL felületéről az kártya összes reléjének reszetelése (előtte <strong>mindet</strong>
+    kapcsold be) </li>
+  <li>6TL felületéről a relé számláló tesztelése
+    <ol>
+      <li>Nyisd meg a 6TL felületét majd RELAY COUNTER felületet.</li>
+      <li>Jegyezz fel pár számláló értéket (elején közepé végén)</li>
+      <li>Indísd újr a 6TL felületét (6TL felül inditásakor kerülnek
+        mentésre a relé számló értékei) </li>
+      <li>Ellenőrizd a relé számló értékeit</li>
+      <li>Zárd be a 6TL felületét</li>
+      <li>Indísd újra a kárytát a táp elvételével</li>
+      <li>Ellenőrizd a relészámló értékeit ismét.</li>
+    </ol>
+    <i> <s> (A DEBUG Firmware jelzi a beírásnak az idejét 32db rel kb
+        320ms-ig tart DEBUG.DEVICE:MemoryRelayCntSave elapsed: 341 ms) </s></i>
+  </li>
+  <li>Kártya bejelenkezésének tesztelése</li>
+  <ol>
+    <li>Zárd be a 6TL felületét, ha meg volt nyitva</li>
+    <li>Kapcsold ki a kártyák tápjájt, ha táp alatt voltak</li>
+    <li>Indisd el a 6TL felületét.</li>
+    <li>Helyezd táp alá a kártyákat</li>
+    <li>Minden kártyánk meg kell hogy jelenjen a 6TL felületén</li>
+  </ol>
+  <li>Terminalban jelzett és a kiolvaott sorozatszának egyeznie kell.</li>
+  <li>Késletetési idők tesztelése</li>
+  <li>Minden sebesség beállitásban tesztelni a kártyákat</li>
+</ul>
+</section>
+
+  </main>
+
+  <footer class="jumbotron text-center">
+    <p class="text-muted"> www.altontech.hu </p>
+    <p class="text-muted"> <a href="mailto:info@altontech.hu">info@altontech.hu</a></p>
+    <p class="text-muted"> +36 20 941 6987/+36 20 806 8608 </p>
+    <p class="text-muted"> 2600 Vác, Sándor u. 8.</p>
+  </footer>
+
+  <!--
+  <script src="./node_modules/jquery/dist/jquery.js"></script>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  -->
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+  
+  </body>
+</html>
